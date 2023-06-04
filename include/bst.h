@@ -46,7 +46,8 @@ class BST {
     return getDepth(root) - 1;
   }
   int search(T value) {
-    return searchNode(root, value);
+    Node* current = searchNode(root, value);
+    return (current != nullptr) ? current->cnt : 0;
   }
 };
 #endif  // INCLUDE_BST_H_
